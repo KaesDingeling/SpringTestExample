@@ -1,3 +1,10 @@
+.classpath
+.settings
+*.class
+*.iml
+bin/
+target/
+
 # Compiled class file
 *.class
 
