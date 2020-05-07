@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import com.google.gson.Gson;
 
@@ -17,10 +19,14 @@ import okhttp3.mockwebserver.Dispatcher;
 import okhttp3.mockwebserver.MockResponse;
 import okhttp3.mockwebserver.RecordedRequest;
 
+@ExtendWith(MockitoExtension.class)
 public class TestLoginApi {
 	
 	@Test
 	public void test() {
+		
+		
+		
 		Controller.getServer().setDispatcher(new Dispatcher() {
 			
 			@Override
