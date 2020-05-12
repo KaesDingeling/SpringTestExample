@@ -2,8 +2,8 @@
 
 There are 2 test examples in this project:
 
-- Profiles [Source](https://github.com/KaesDingeling/SpringTestExample/tree/master/src/main/java/de/kaesdingeling/spring/test/example) [Tests](https://github.com/KaesDingeling/SpringTestExample/tree/master/src/test/java/de/kaesdingeling/spring/test/example/test)
-- REST-Tests [Source](https://github.com/KaesDingeling/SpringTestExample/tree/master/src/main/java/de/kaesdingeling/springtestexample) [Tests](https://github.com/KaesDingeling/SpringTestExample/tree/master/src/test/java/de/kaesdingeling/springtestexample/test)
+- Profiles [Source](https://github.com/KaesDingeling/SpringTestExample/tree/master/src/main/java/de/kaesdingeling/spring/test/example) | [Tests](https://github.com/KaesDingeling/SpringTestExample/tree/master/src/test/java/de/kaesdingeling/spring/test/example/test)
+- REST-Tests [Source](https://github.com/KaesDingeling/SpringTestExample/tree/master/src/main/java/de/kaesdingeling/springtestexample) | [Tests](https://github.com/KaesDingeling/SpringTestExample/tree/master/src/test/java/de/kaesdingeling/springtestexample/test)
 
 
 ## Tests with Profiles
