@@ -5,6 +5,7 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.test.context.ActiveProfiles;
 
 import de.kaesdingeling.spring.test.example.Main;
@@ -30,6 +31,9 @@ public class UnitDBTest {
 	@Autowired(required = false)
 	private RESTConfig restConfig;
 	
+	@Autowired
+	private Environment environment;
+	
 	/**
 	 * 
 	 * 
@@ -42,6 +46,10 @@ public class UnitDBTest {
 		
 		assertNotNull(dbConfig);
 		assertNull(restConfig);
+		
+		String serverPort = environment.getProperty("local.server.port");
+		
+		assertNull(serverPort);
 		
 		log.info("[UNIT-TEST] finished");
 	}

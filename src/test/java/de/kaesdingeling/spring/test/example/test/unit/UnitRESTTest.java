@@ -1,6 +1,7 @@
-package de.kaesdingeling.spring.test.example.test.integration;
+package de.kaesdingeling.spring.test.example.test.unit;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.jupiter.api.Test;
@@ -22,8 +23,8 @@ import lombok.extern.log4j.Log4j2;
  */
 @Log4j2
 @JunitTestWithWebServer(classes = Main.class)
-@ActiveProfiles({ CONSTANTS.PROFILE_INTEGRATION_TEST })
-public class IntegrationTest {
+@ActiveProfiles({ CONSTANTS.PROFILE_CONFIG_REST })
+public class UnitRESTTest {
 	
 	@Autowired(required = false)
 	private DBConfig dbConfig;
@@ -42,14 +43,14 @@ public class IntegrationTest {
 	 */
 	@Test
 	public void test() {
-		log.info("[INTEGRATION-TEST] init");
+		log.info("[UNIT-TEST] init");
 		
-		assertNotNull(dbConfig);
 		assertNotNull(restConfig);
+		assertNull(dbConfig);
 		assertTrue(serverPort > 0);
 		
 		log.info("[TOMCAT] starts on port: " + serverPort);
 		
-		log.info("[INTEGRATION-TEST] finished");
+		log.info("[UNIT-TEST] finished");
 	}
 }
