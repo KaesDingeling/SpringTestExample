@@ -7,16 +7,17 @@ There are 2 test examples in this project:
 
 
 ## Tests with Profiles
-For the example for Junit tests with profiles the following sources were used among others:
-
-- https://spring.io/blog/2011/06/21/spring-3-1-m2-testing-with-configuration-classes-and-profiles
-- https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/testing.html#spring-testing-annotation-bootstrapwith
+To be able to test only parts of the application without loading parts of the application which are not necessary for testing.
 
 With the annotation @JunitTestWithWebServer the Tomcat is loaded during testing.
 With @JunitTestWithoutWebServer there is no server to start.
 
 The Junit tests are controlled by profiles, which allows to load configurations, services and components only if the profile is active.
 It is possible to assign several profiles to a test.
+
+### References
+- https://spring.io/blog/2011/06/21/spring-3-1-m2-testing-with-configuration-classes-and-profiles
+- https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/testing.html#spring-testing-annotation-bootstrapwith
 
 
 ## REST-Tests
